@@ -1,0 +1,91 @@
+<!--
+    IfcTester - IDS based model auditing
+    Copyright (C) 2022 Dion Moult <dion@thinkmoult.com>
+
+    This file is part of IfcTester.
+
+    IfcTester is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    IfcTester is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with IfcTester.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang=>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="foobaro">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Inconsolata|Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Arial', sans-serif; padding: 10px 40px; }
+        span.time { color: #999; font-style: italic; float: right; }
+        span.step-time { float: right; color: #555; font-size: 0.8em; font-style: italic; }
+        span.success { background-color: #97cc64; padding: 5px; border-radius: 5px; color: #FFF; font-weight: bold; }
+        span.failure { background-color: #fb5a3e; padding: 5px; border-radius: 5px; color: #FFF; font-weight: bold; }
+        p.failure { background-color: #fb5a3e; padding: 5px; border-radius: 5px; color: #fff; }
+        p.unspecified { background-color: #994f00; padding: 5px; border-radius: 5px; color: #fff; }
+        p.skipped { background-color: #8b8d8f; padding: 5px; border-radius: 5px; color: #fff; }
+        p.description { background-color: #eee; border-radius: 5px; padding: 20px; margin-left: auto; margin-right: auto; display: inline-block; font-weight: bold;}
+        li { padding: 10px; font-family: monospace; }
+        li.success { background-color: #b6cca1; color: #333; }
+        li.failure { background-color: #fbb4a8; color: #900; }
+        li.unspecified { background-color: #ffd37f; color: #a30; }
+        li.skipped { background-color: #f5f5f5; color: #333; }
+        li p { margin-bottom: 0px; }
+        footer { color: #999; font-size: 0.8em; }
+        header { text-align: center; }
+        hr { margin: 20px; margin-left: 0px; margin-right: 0px;  border: none; border-top: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>buildingSMART Sample IDS</h1>
+        <p><strong>2023-04-13 13:03:16</strong></p>
+    </header>
+    <section>
+        <h2>Project naming</h2>
+        <p>
+            <span class="failure">Fail</span>
+            Passed: <strong>0 / 1</strong> (0%)
+        </p>
+        <ol>
+            <li class="failure">
+                The Name shall be TEST
+                
+                <p class="failure">
+                    The attribute value &quot;ETL-LTN-TOP-ZZ-ZZ-MO&quot; does not match the requirement <em style="color: #fbb4a8;">#126=IfcProject(&#x27;0zKBwRms98NO2O85MD2KhV&#x27;,#42,&#x27;ETL-LTN-TOP-ZZ-ZZ-MO&#x27;,$,$,&#x27;East Towers Leon, Proyecto Topografico, Modelo 3D&#x27;,&#x27;BIM&#x27;,(#113),#108)</em><br />
+                </p>
+                
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h2>Fire rating</h2>
+        <p>
+            <span class="success">Pass</span>
+            Passed: <strong>0 / 0</strong> (N/A%)
+        </p>
+        <ol>
+            <li class="success">
+                FireRating data shall be {&#x27;pattern&#x27;: &#x27;(-|[0-9]{2,3})\\/(-|[0-9]{2,3})\\/(-|[0-9]{2,3})&#x27;} and in the dataset Pset_WallCommon
+                
+            </li>
+        </ol>
+    </section>
+    <hr>
+    <footer>
+        <p>
+            Report by <a href="https://blenderbim.org/">BlenderBIM</a> and <a href="http://ifcopenshell.org/">IfcOpenShell</a>.
+        </p>
+    </footer>
+</body>
+</html>
